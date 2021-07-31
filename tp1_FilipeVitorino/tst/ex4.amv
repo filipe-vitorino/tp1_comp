@@ -1,0 +1,16 @@
+WORD 100
+READ R0
+LOAD R1 start
+LOAD R3 start
+
+fatorial: LOAD R2 start
+          SUB R2 R0
+          JZ final
+          MUL R1 R0
+          SUB R0 R3
+          JUMP fatorial
+
+final: WRITE R1
+HALT
+start: WORD 1
+END

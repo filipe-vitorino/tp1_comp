@@ -1,0 +1,20 @@
+READ R0
+READ R1
+READ R2
+LOAD R3 negativo
+
+SUB R0 R2
+JN r2maiorr0
+
+WRITE R3
+JUMP halt
+
+r2maiorr0: SUB R1 R2
+           JN maior
+           WRITE R3
+           JUMP halt
+
+maior: WRITE R2
+halt: HALT
+negativo: WORD -1
+END
