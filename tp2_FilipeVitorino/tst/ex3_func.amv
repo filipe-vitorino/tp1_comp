@@ -1,0 +1,8 @@
+fatorial: LOAD R2 start
+          SUB R2 R0
+          JZ return
+          MUL R1 R0
+          SUB R0 R3
+          JUMP fatorial
+          return: RET
+END

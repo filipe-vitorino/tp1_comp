@@ -1,0 +1,8 @@
+main: READ R0
+    LOAD R1 start
+    LOAD R3 start
+    CALL fatorial
+    WRITE R1
+    HALT
+start: WORD 1
+END
